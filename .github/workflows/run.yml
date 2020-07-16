@@ -27,4 +27,4 @@ jobs:
       run: |
         mkdir ~/.aws
         echo '${{ secrets.AWS_CREDENTIALS }}' > ~/.aws/credentials
-        python main.py -hook ${{ HOOK_URL }}
+        python main.py -hook '${{ secrets.HOOK_URL }}''
