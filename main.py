@@ -71,7 +71,7 @@ def check(url):
 
 
 def call_hook(hook_url, url, success):
-    msg = '{}\tis\t{}'.format(url, 'up' if success else 'down')
+    msg = '{}\t{}'.format(url, '✅' if success else '❌')
     payload = {'msg': msg}
     requests.post(hook_url, json=payload)
 
